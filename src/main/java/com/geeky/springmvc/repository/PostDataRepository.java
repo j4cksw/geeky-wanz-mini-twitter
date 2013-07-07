@@ -34,12 +34,16 @@ public class PostDataRepository {
 	
 	public List<PostData> getAll(String userID) {
 		List<PostData> listData = new ArrayList<PostData>();
-		for (Object postData: redisTemplate.opsForList().range(userID, 0, 20)) {
+		for (Object postData: redisTemplate.opsForList().range(userID, 0, 19)) {
 			Gson gson = new GsonBuilder().setDateFormat(DateFormat.FULL, DateFormat.FULL).create();
 			PostData out = gson.fromJson((String)postData, PostData.class);
 			listData.add(out);
 		}
 		return listData;
+	}
+
+	public void delete(String userId, int index) {
+		redisTemplate.opsForList().remove(userId, index, 1);
 	}
 	
 }

@@ -63,4 +63,17 @@ public class PostController {
 		return new ModelAndView("home","postData", null);
 		
 	}
+	
+	@RequestMapping(value="/delete")
+	public ModelAndView delete(@ModelAttribute("postDataForm") @Valid String userID){
+		
+		int index = 0;
+		postService.delete(userID, index);
+		
+		if (userID != null) { 
+			List<PostData> resultList = postService.getMessage(userID);
+			return new ModelAndView("home","postData", resultList);
+		}
+		return new ModelAndView("home","postData", null);
+	}
 }
