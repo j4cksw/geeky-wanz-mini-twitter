@@ -1,6 +1,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
+<fmt:setLocale value="en_US"/>
 <head>
 <title>Geeky แว๊น  Mini Twitter | Home</title>
 <link rel="stylesheet" href="resources/style2.css" type="text/css"/>
@@ -41,7 +43,7 @@
 				<a href="/users/1/">${data.userID}</a>
 			  </span>
 			  <span class="content">as ${data.message}</span>
-			  <span class="timestamp">${data.created}</span>
+			  <span class="timestamp">Posted <fmt:formatDate pattern="MMMM d, yyyy, hh:mm a" value="${data.created}" /></span>
 			</td>
 			
 				<td colspan="0">
