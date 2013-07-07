@@ -15,18 +15,15 @@ public class PostService {
 	@Autowired
 	private PostDataRepository dao;
 	
-	public List<PostData> addMessage(String userID, String message) {
-		PostData postData = new PostData();
-		postData.setUserID(userID);
-		postData.setMessage(message);
-		dao.add(postData);
-		return this.getMessage(userID);
-	}
-
 	public List<PostData> getMessage(String userID) {
 		List<PostData> list = new ArrayList<PostData>();
-		list = dao.getAll();
+		list = dao.getAll(userID);
 		return list;
+	}
+
+	public List<PostData> addMessage(PostData postData) {
+		dao.add(postData);
+		return this.getMessage(postData.getUserID());
 	}
 	
 }

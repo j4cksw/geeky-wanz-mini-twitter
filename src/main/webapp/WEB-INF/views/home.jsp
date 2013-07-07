@@ -1,5 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <html>
 <head>
 <title>Geeky ·«Íπ  Mini Twitter | Home</title>
@@ -9,17 +11,17 @@
 <div class="container">
 	<div id="nav">
 		<a href="/">Home</a> |
-		
+
 			<a href="/users/">Users</a> |
 			<a href="/logout/">Sign out</a>
-		
+
 	</div>
 	<h1>Geeky ·«Íπ  Mini Twitter</h1>
-	
+
 
 	<p>Welcome user1!
 	Here you can store and share bookmarks!</p>
-	
+
 	<p>Hi user1!
       What is on your mind?</p> 
     <form method="post" action="add">
@@ -32,9 +34,9 @@
 		</p>
 	<input type="submit" value="post" />
 	</form>
-	
+
 	<table class="microposts">
-	
+	${postData}
 		<c:forEach items="${postData}" var="data">
 		  <tr>
 			<td colspan="1">
@@ -44,7 +46,7 @@
 				</a>
 			  </span>
 			  <span class="content">as ${data.message}</span>
-			  <span class="timestamp">${data.create}</span>
+			  <span class="timestamp">${data.created}</span>
 			</td>
 			
 				<td colspan="0">
@@ -53,7 +55,7 @@
 		  </tr>
 		</c:forEach>
 	</table>
-	
+
 
 
 </div>

@@ -1,7 +1,7 @@
 package com.geeky.springmvc.domain;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
+import java.util.Date;
 
 public class PostData implements Serializable {
 
@@ -11,7 +11,7 @@ public class PostData implements Serializable {
 	
 	private String userID;	
 	private String message;
-	private Timestamp created;
+	private Date created;
 
 	public PostData() {
 		super();
@@ -49,11 +49,11 @@ public class PostData implements Serializable {
 		return OBJECT_KEY;
 	}
 
-	public Timestamp getCreated() {
+	public Date getCreated() {
 		return created;
 	}
 
-	public void setCreated(Timestamp created) {
+	public void setCreated(Date created) {
 		this.created = created;
 	}
 
