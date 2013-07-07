@@ -22,7 +22,7 @@ public class PostRepository implements Repository<Post>{
 
 	@Override
 	public void put(Post entry) {
-		redisTemplate.opsForHash().put(entry.getObjectKey(), entry.getKey(), entry);
+		redisTemplate.opsForList().rightPush(entry.getObjectKey(), entry);
 	}
 
 	@Override
