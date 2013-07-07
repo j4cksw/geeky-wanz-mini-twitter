@@ -14,5 +14,10 @@ public class PostService {
 		List<PostData> list = new ArrayList<PostData>();
 		return list;
 	}
+
+	public List<PostData> getMessage(String userID) {
+		List<PostData> list = new ArrayList<PostData>();
+		return list;
+	}
 	
 }

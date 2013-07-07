@@ -16,6 +16,7 @@ public class PostData implements Serializable {
 	private String message;
 	private Date date = new Date();
 
+
 	public PostData(String userId, String message) {
 		super();
 		this.userID = userId;
