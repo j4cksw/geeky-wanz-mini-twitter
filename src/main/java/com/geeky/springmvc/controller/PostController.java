@@ -2,6 +2,7 @@ package com.geeky.springmvc.controller;
 
 import java.util.Date;
 import java.util.List;
+import java.lang.Integer;
 
 import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
@@ -37,11 +38,11 @@ public class PostController {
 	@RequestMapping(value="/delete", method = RequestMethod.GET)
 	public ModelAndView deleteData(HttpServletRequest request) {
 	
-		System.out.println("index =" + request.getParameter("delete_index").toString());
 		String userID = request.getParameter("userID");
 		String delete_index = request.getParameter("delete_index");
+		System.out.println("user " + userID + "index =" + Integer.parseInt(delete_index));
 		
-		postService.delete(userID, delete_index);
+		postService.delete(userID, Integer.parseInt(delete_index));
 		if (userID != null) { 
 			List<PostData> resultList = postService.getMessage(userID);
 			return new ModelAndView("home","postData", resultList);
