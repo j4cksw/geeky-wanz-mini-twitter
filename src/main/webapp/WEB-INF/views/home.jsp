@@ -24,7 +24,7 @@
       What is on your mind?</p> 
     <form method="post" action="add">
 		<div style='display:none'>
-			<input type='hidden' name='userID' id="userID" value='user1' />
+			<input type='hidden' required name='userID' id="userID" value='user1' />
 		</div>
 		<p>
 			<label for="id_content">Say it:</label> 
