@@ -41,5 +41,9 @@ public class PostDataRepository {
 		}
 		return listData;
 	}
+
+	public void delete(String userId, int index) {
+		redisTemplate.opsForList().remove(userId, index, 1);
+	}
 	
 }

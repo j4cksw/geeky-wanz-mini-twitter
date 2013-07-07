@@ -25,5 +25,9 @@ public class PostService {
 		dao.add(postData);
 		return this.getMessage(postData.getUserID());
 	}
+
+	public void delete(String userId, int index) {
+		dao.delete(userId, index);
+	}
 	
 }
