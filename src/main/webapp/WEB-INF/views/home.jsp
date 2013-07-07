@@ -11,8 +11,8 @@
 <div class="container">
 	<div id="nav">
 		<a href="">Home</a> |
-		<a href="/mini-twitter-vans/users/">Users</a> |
-		<a href="/logout/">Sign out</a>
+		<a href="users">Users</a> |
+		<a href="">Sign out</a>
 	</div>
 	<h1>Geeky แว๊น  Mini Twitter</h1>
 
