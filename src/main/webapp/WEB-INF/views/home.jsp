@@ -8,10 +8,10 @@
 <body>
 <div class="container">
 	<div id="nav">
-		<a href="/">Home</a> |
+		<a href="">Home</a> |
 
-			<a href="/users/">Users</a> |
-			<a href="/logout/">Sign out</a>
+			<a href="users/">Users</a> |
+			<a href="logout/">Sign out</a>
 
 	</div>
 	<h1>Geeky แว๊น  Mini Twitter</h1>
@@ -45,7 +45,7 @@
 			</td>
 			
 				<td colspan="0">
-					<a href="delete?userID=${data.userID}&delete_index=${index.count}">delete</a>	    
+					<a href="delete?userID=${data.userID}&delete_index=${index.count-1}">delete</a>	    
 				</td>
 			
 		  </tr>
