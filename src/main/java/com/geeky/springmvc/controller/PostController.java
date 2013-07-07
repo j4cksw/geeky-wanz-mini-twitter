@@ -1,5 +1,6 @@
 package com.geeky.springmvc.controller;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -26,7 +27,9 @@ public class PostController {
 		if (result.hasErrors()) {
 			return new ModelAndView("postDataForm");
 		}
-		List<PostData> resultList = postService.addMessage(postData.getUserID(), postData.getMessage());
+		Date date = new Date();
+		postData.setCreated(date);
+		List<PostData> resultList = postService.addMessage(postData);
 		return new ModelAndView("home","postData", resultList);
 	}
 	

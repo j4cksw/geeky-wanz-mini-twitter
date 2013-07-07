@@ -21,7 +21,7 @@
 					<td><label for="id_content">Say it:</label></td>
 					<td>
 						<input type="hidden" name="userID" id="userID" value="user1"/>
-						<textarea cols="40" rows="10" maxlength="140" name="message" id="message">xxx</textarea>
+						<textarea cols="40" rows="10" maxlength="140" name="message" id="message"></textarea>
 					</td>
 				</tr>
 				<tr valign="top">
