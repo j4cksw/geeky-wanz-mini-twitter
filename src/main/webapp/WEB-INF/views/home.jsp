@@ -12,7 +12,7 @@
 	<div id="nav">
 		<a href="/">Home</a> |
 
-			<a href="/users/">Users</a> |
+			<a href="/mini-twitter-vans/users/">Users</a> |
 			<a href="/logout/">Sign out</a>
 
 	</div>

@@ -27,4 +27,9 @@ public class UsersRepository {
 		}
 		return listData;
 	}
+
+	public void addUser(String username) {
+		redisTemplate.opsForList().leftPush("users-list", username);		
+	}
+	
 }
