@@ -15,12 +15,11 @@
 	
 	<p>Hi user1!
       What is on your mind?</p> 
-    <form method="post" action="">
+    <form method="post" action="add">
 		<p>
 			<label for="id_content">Say it:</label> 
-			<input type="hidden" name="user_id" id="user_id" value="user1">
-			<textarea cols="40" rows="10" maxlength="140" name="message" id="message">
-			</textarea>
+			<input type="hidden" name="userID" id="userID" value="user1">
+			<textarea cols="40" rows="10" maxlength="140" name="message" id="message"></textarea>
 		</p>
 		<input type="submit" value="post" />
 	</form>

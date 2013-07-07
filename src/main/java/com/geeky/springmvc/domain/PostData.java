@@ -5,6 +5,11 @@ public class PostData {
 	private String userID;	
 	private String message;
 
+	public PostData() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public PostData(String message) {
 		super();
 		this.message = message;
