@@ -1,10 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
+<%@ page session="false" pageEncoding="UTF-8" %>
 <html>
 <head>
-<title>Geeky áÇê¹  Mini Twitter | Home</title>
+<title>Geeky Ã¡Ã‡ÃªÂ¹  Mini Twitter | Home</title>
 <link rel="stylesheet" href="resources/style2.css" type="text/css"/>
 </head>
 <body>
@@ -16,7 +14,7 @@
 			<a href="/logout/">Sign out</a>
 
 	</div>
-	<h1>Geeky áÇê¹  Mini Twitter</h1>
+	<h1>Geeky Ã¡Ã‡ÃªÂ¹  Mini Twitter</h1>
 
 
 	<p>Welcome user1!
@@ -36,7 +34,6 @@
 	</form>
 
 	<table class="microposts">
-	${postData}
 		<c:forEach items="${postData}" var="data">
 		  <tr>
 			<td colspan="1">
