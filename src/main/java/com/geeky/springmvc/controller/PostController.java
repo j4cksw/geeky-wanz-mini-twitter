@@ -2,8 +2,10 @@ package com.geeky.springmvc.controller;
 
 import java.util.Date;
 import java.util.List;
+import java.lang.Integer;
 
 import javax.validation.Valid;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -32,6 +34,23 @@ public class PostController {
 		List<PostData> resultList = postService.addMessage(postData);
 		return new ModelAndView("home","postData", resultList);
 	}
+
+	@RequestMapping(value="/delete", method = RequestMethod.GET)
+	public ModelAndView deleteData(HttpServletRequest request) {
+	
+		String userID = request.getParameter("userID");
+		String delete_index = request.getParameter("delete_index");
+		System.out.println("user " + userID + "index =" + Integer.parseInt(delete_index));
+		
+		postService.delete(userID, Integer.parseInt(delete_index));
+		if (userID != null) { 
+			List<PostData> resultList = postService.getMessage(userID);
+			return new ModelAndView("home","postData", resultList);
+		}
+		
+		return new ModelAndView("home","postData", null);
+	}
+
 	
 	@RequestMapping(value="/",  method = RequestMethod.GET)
 	public ModelAndView init(@ModelAttribute("postDataForm") @Valid String userID, BindingResult result) {

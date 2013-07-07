@@ -36,7 +36,7 @@
 	</form>
 
 	<table class="microposts">
-		<c:forEach items="${postData}" var="data">
+		<c:forEach items="${postData}" var="data" varStatus="index">
 		  <tr>
 			<td colspan="1">
 			  <span class="user">
@@ -47,6 +47,7 @@
 			</td>
 			
 				<td colspan="0">
+					<a href="delete?userID=${data.userID}&delete_index=${index.count}">delete</a>	    
 				</td>
 			
 		  </tr>
