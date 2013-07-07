@@ -22,12 +22,10 @@ public class PostController {
 	private PostService postService;
 
 	@RequestMapping(value="/add", method = RequestMethod.POST)
-	public ModelAndView onSubmit(@ModelAttribute("postDataForm") @Valid String message, @Valid String userID, BindingResult result) {
+	public ModelAndView onSubmit(@ModelAttribute("postDataForm") @Valid PostData postData, BindingResult result) {
 		if (result.hasErrors()) {
 			return new ModelAndView("postDataForm");
 		}
-		PostData postData = new PostData(userID, message);
-		System.out.println("============================> "+message);
 		List<PostData> resultList = postService.addMessage(postData.getUserID(), postData.getMessage());
 		return new ModelAndView("home","postData", resultList);
 	}
