@@ -43,7 +43,14 @@ public class PostDataRepository {
 	}
 
 	public void delete(String userId, int index) {
-		redisTemplate.opsForList().remove(userId, index, 1);
+		
+		List<PostData> posDataList = getAll(userId);
+		
+		PostData target = posDataList.get(index);
+		
+		Gson gson = new GsonBuilder().setDateFormat(DateFormat.FULL, DateFormat.FULL).create();
+		
+		redisTemplate.opsForList().remove(userId, index, gson.toJson(target));
 	}
 	
 }
