@@ -1,6 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 
@@ -12,8 +9,9 @@
 
 	<h1>Geek แว๊น Mini Twitter</h1>
 	
+	
 
-	<p>Welcome noppakrit_t!<br>Here you can store and share bookmarks!</p>
+	<p>Welcome user1!<br>Here you can store and share bookmarks!</p>
 	
 	<p>Hi user1!<br>What is on your mind?</p> 
     <form method="post" action="add">
@@ -30,66 +28,27 @@
 					<td />
 					<td >
 						
-						<input type="submit" value="      post      " />
+						<input type="submit" value="post" />
 					</td>
 				</tr>
 			</table>
 	</form>
 	<div align="center">
 		<table class="microposts">
-		
-		  <tr >
-			<td colspan="1">
-			  <span class="user">
-				<a href="/users/5/">noppakrit_t</a>
-			  </span>
-			  <span class="content">as</span>
-			  <span class="timestamp">Posted July 6, 2013, 9:34 p.m.</span>
-			</td>
-			
-				<td colspan="0">
-				</td>
-			
-		  </tr>
-		  <tr>
-			<td colspan="1">
-			  <span class="user">
-				<a href="/users/5/">noppakrit_t</a>
-			  </span>
-			  <span class="content">as</span>
-			  <span class="timestamp">Posted July 6, 2013, 9:34 p.m.</span>
-			</td>
-			
-				<td colspan="0">
-				</td>
-			
-		  </tr>
-		  <tr>
-			<td colspan="1">
-			  <span class="user">
-				<a href="/users/5/">noppakrit_t</a>
-			  </span>
-			  <span class="content">as</span>
-			  <span class="timestamp">Posted July 6, 2013, 9:34 p.m.</span>
-			</td>
-			
-				<td colspan="0">
-				</td>
-			
-		  </tr>
-		  <tr>
-			<td colspan="1">
-			  <span class="user">
-				<a href="/users/5/">noppakrit_t</a>
-			  </span>
-			  <span class="content">as</span>
-			  <span class="timestamp">Posted July 6, 2013, 9:34 p.m.</span>
-			</td>
-			
-				<td colspan="0">
-				</td>
-			
-		  </tr>
+			<% for(int i=0;i<10;i++) {%>
+				  <tr>
+					<td colspan="1">
+					  <span class="user">
+						user1
+					  </span>
+					  <span class="content">Item  </span>
+					  <span class="timestamp">Posted July 6, 2013, 9:22 p.m.</span>
+					</td>
+					<td colspan="0">	      
+					</td>
+					
+				  </tr>
+			<%}%>
 		</table>
 	</div>
 	

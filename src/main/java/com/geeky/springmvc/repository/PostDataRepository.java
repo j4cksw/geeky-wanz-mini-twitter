@@ -21,6 +21,6 @@ public class PostDataRepository {
 	}
 	
 	public void push(PostData entry){
-		redisTemplate.opsForHash().put(PostData.OBJECT_KEY, entry.getUserID(), entry);
+		//redisTemplate.opsForHash().put(PostData.OBJECT_KEY, entry.getUserID(), entry);
 	}
 }
