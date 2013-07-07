@@ -1,4 +1,4 @@
-package com.geeky.spring.mvc.springmvc.controller;
+package com.geeky.springmvc.controller;
 
 import java.io.IOException;
 

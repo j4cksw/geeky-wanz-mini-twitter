@@ -1,4 +1,4 @@
-package com.geeky.spring.mvc.springmvc.config;
+package com.geeky.springmvc.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
-@ComponentScan(basePackages="com.geeky.spring.mvc.springmvc")
+@ComponentScan(basePackages="com.geeky.springmvc")
 @EnableWebMvc
 public class MvcConfiguration extends WebMvcConfigurerAdapter{
 

@@ -24,7 +24,7 @@
 		</init-param>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>com.geeky.spring.mvc.springmvc</param-value>
+			<param-value>com.geeky.springmvc</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
