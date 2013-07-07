@@ -1,9 +1,17 @@
 package com.geeky.springmvc.domain;
 
-public class PostData {
+import java.io.Serializable;
+import java.sql.Timestamp;
+
+public class PostData implements Serializable {
+
+	private static final long serialVersionUID = 4173565313871347668L;
+
+	public static final String OBJECT_KEY = "POST_DATA";
 	
 	private String userID;	
 	private String message;
+	private Timestamp created;
 
 	public PostData() {
 		super();
@@ -12,6 +20,12 @@ public class PostData {
 
 	public PostData(String message) {
 		super();
+		this.message = message;
+	}
+
+	public PostData(String userID, String message) {
+		super();
+		this.userID = userID;
 		this.message = message;
 	}
 
@@ -31,9 +45,22 @@ public class PostData {
 		this.message = message;
 	}
 
+	public String getObjectKey() {
+		return OBJECT_KEY;
+	}
+
+	public Timestamp getCreated() {
+		return created;
+	}
+
+	public void setCreated(Timestamp created) {
+		this.created = created;
+	}
+
 	@Override
 	public String toString() {
-		return "PostData [userID=" + userID + ", message=" + message + "]";
+		return "PostData [userID=" + userID + ", message=" + message
+				+ ", created=" + created + "]";
 	}
-		
+	
 }

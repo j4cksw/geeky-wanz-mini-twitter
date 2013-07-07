@@ -6,26 +6,26 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.geeky.springmvc.dao.PostDataDao;
 import com.geeky.springmvc.domain.PostData;
+import com.geeky.springmvc.repository.PostDataRepository;
 
 @Service
 public class PostService {
 
 	@Autowired
-	private PostDataDao dao;
+	private PostDataRepository dao;
 	
 	public List<PostData> addMessage(String userID, String message) {
 		PostData postData = new PostData();
 		postData.setUserID(userID);
 		postData.setMessage(message);
-		dao.addData(userID, postData);
+		dao.add(postData);
 		return this.getMessage(userID);
 	}
 
 	public List<PostData> getMessage(String userID) {
 		List<PostData> list = new ArrayList<PostData>();
-		list = dao.listData(userID);
+		list = dao.getAll();
 		return list;
 	}
 	
