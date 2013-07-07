@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
 <head>
-<title>Geeky ·«Íπ  Mini Twitter | Home</title>
+<title>Geeky ‡πÅ‡∏ß‡πä‡∏ô  Mini Twitter | Home</title>
 <link rel="stylesheet" href="resources/style2.css" type="text/css"/>
 </head>
 <body>
@@ -14,7 +14,7 @@
 			<a href="/logout/">Sign out</a>
 
 	</div>
-	<h1>Geeky ·«Íπ  Mini Twitter</h1>
+	<h1>Geeky ‡πÅ‡∏ß‡πä‡∏ô  Mini Twitter</h1>
 
 
 	<p>Welcome user1!
@@ -34,22 +34,21 @@
 	</form>
 
 	<table class="microposts">
-	<% for(int i=0;i<10;i++) {%>
-
-	  <tr>
-	    <td colspan="1">
-	      <span class="user">
-	        <a href="/users/1/">user1</a>
-	      </span>
-	      <span class="content">as Item</span>
-	      <span class="timestamp">Posted July 6, 2013, 9:34 p.m.</span>
-	    </td>
-
-			<td colspan="0">
-		    </td>
-
-	  </tr>
-	<%}%>
+		<c:forEach items="${postData}" var="data">
+		  <tr>
+			<td colspan="1">
+			  <span class="user">
+				<a href="/users/1/">${data.userID}</a>
+			  </span>
+			  <span class="content">as ${data.message}</span>
+			  <span class="timestamp">${data.created}</span>
+			</td>
+			
+				<td colspan="0">
+				</td>
+			
+		  </tr>
+		</c:forEach>
 	</table>
 
 
