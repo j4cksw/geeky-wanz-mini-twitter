@@ -1,8 +1,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
 <head>
-<title>Geeky áÇê¹  Mini Twitter | Home</title>
+<title>Geeky แว๊น  Mini Twitter | Home</title>
 <link rel="stylesheet" href="resources/style2.css" type="text/css"/>
 </head>
 <body>
@@ -14,7 +14,7 @@
 			<a href="/logout/">Sign out</a>
 
 	</div>
-	<h1>Geeky áÇê¹  Mini Twitter</h1>
+	<h1>Geeky แว๊น  Mini Twitter</h1>
 
 
 	<p>Welcome user1!
@@ -38,9 +38,7 @@
 		  <tr>
 			<td colspan="1">
 			  <span class="user">
-				<a href="/users/1/">${data.userID}
-				<c:out value="${data.message}" />
-				</a>
+				<a href="/users/1/">${data.userID}</a>
 			  </span>
 			  <span class="content">as ${data.message}</span>
 			  <span class="timestamp">${data.created}</span>
