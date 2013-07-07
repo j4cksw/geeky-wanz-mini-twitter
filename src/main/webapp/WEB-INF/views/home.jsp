@@ -18,7 +18,8 @@
     <form method="post" action="">
 		<p>
 			<label for="id_content">Say it:</label> 
-			<textarea cols="40" rows="10" maxlength="140" name="content" id="id_content">
+			<input type="hidden" name="user_id" id="user_id" value="user1">
+			<textarea cols="40" rows="10" maxlength="140" name="message" id="message">
 			</textarea>
 		</p>
 		<input type="submit" value="post" />
