@@ -11,7 +11,7 @@
 		<a href="">Home</a> |
 
 			<a href="users">Users</a> |
-			<a href="logout">Sign out</a>
+			<a href="">Sign out</a>
 
 	</div>
 	<h1>Geeky แว๊น  Mini Twitter</h1>
