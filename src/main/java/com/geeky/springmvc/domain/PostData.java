@@ -1,12 +1,24 @@
 package com.geeky.springmvc.domain;
 
-public class PostData {
+import java.io.Serializable;
+import java.util.Date;
+
+public class PostData implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4255079607108918154L;
+
+	public static final String OBJECT_KEY = "POST_DATA";
 	
 	private String userID;	
 	private String message;
+	private Date date = new Date();
 
-	public PostData(String message) {
+	public PostData(String userId, String message) {
 		super();
+		this.userID = userId;
 		this.message = message;
 	}
 
@@ -24,6 +36,14 @@ public class PostData {
 
 	public void setMessage(String message) {
 		this.message = message;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
 	}
 	
 }
