@@ -23,8 +23,6 @@ public class PostController {
 
 	@RequestMapping(value="/add", method = RequestMethod.POST)
 	public ModelAndView onSubmit(@ModelAttribute("postDataForm") @Valid PostData postData, BindingResult result) {
-		System.out.println(postData.getUserID());
-		System.out.println(postData.getMessage());
 		if (result.hasErrors()) {
 			return new ModelAndView("postDataForm");
 		}
@@ -34,7 +32,6 @@ public class PostController {
 	
 	@RequestMapping(value="/",  method = RequestMethod.GET)
 	public ModelAndView init(@ModelAttribute("postDataForm") @Valid String userID, BindingResult result) {
-		System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 		if (result.hasErrors()) {
 			return new ModelAndView("home");
 		}
