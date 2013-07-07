@@ -34,22 +34,24 @@
 	</form>
 	
 	<table class="microposts">
-	<% for(int i=0;i<10;i++) {%>
 	
-	  <tr>
-	    <td colspan="1">
-	      <span class="user">
-	        <a href="/users/1/">user1</a>
-	      </span>
-	      <span class="content">as Item</span>
-	      <span class="timestamp">Posted July 6, 2013, 9:34 p.m.</span>
-	    </td>
-	    
-			<td colspan="0">
-		    </td>
-	    
-	  </tr>
-	<%}%>
+		<c:forEach items="${postData}" var="data">
+		  <tr>
+			<td colspan="1">
+			  <span class="user">
+				<a href="/users/1/">${data.userID}
+				<c:out value="${data.message}" />
+				</a>
+			  </span>
+			  <span class="content">as ${data.message}</span>
+			  <span class="timestamp">${data.create}</span>
+			</td>
+			
+				<td colspan="0">
+				</td>
+			
+		  </tr>
+		</c:forEach>
 	</table>
 	
 
